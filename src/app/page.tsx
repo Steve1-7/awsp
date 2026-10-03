@@ -57,9 +57,9 @@ const projectCards = [
 ];
 
 const testimonials = [
-  { name: "M. van der Merwe", service: "Commercial Solar", quote: "The process felt polished from day one. We submitted photos, got clarity quickly, and the team delivered exactly what we needed." },
-  { name: "A. Pillay", service: "Repair Service", quote: "A clear request flow, helpful communication and no confusion. It was fast, practical and reassuring." },
-  { name: "N. Mokoena", service: "Cleaning", quote: "Easy to book, responsive staff, and a very professional service. The quality was immediately noticeable." },
+  { name: "Gustav Spanjer", service: "Industrial Engine Parts (Pty) Ltd", quote: "From start to finish, A-Way Solutions & Projects demonstrated professionalism, efficiency, and a commitment to quality… I wholeheartedly recommend them for anyone seeking professional and reliable solar installation services." },
+  { name: "Doron Collen", service: "Residential", quote: "Mr. Geldenhuys demonstrated a high level of professionalism and expertise throughout the installation process… I would not hesitate to recommend A-Way to anyone seeking reliable and professional services." },
+  { name: "Derek Mills", service: "D&A Gearbox Services", quote: "Jean is always helpful and friendly… His knowledge and know-how spoke of utmost professionalism. The pride he takes in his work was visible in even the smallest of details." },
 ];
 
 const insightCards = [
