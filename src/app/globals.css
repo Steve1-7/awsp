@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  --awsp-bg: #07141d;
+  --awsp-bg-soft: #0d1b28;
+  --awsp-panel: #101d28;
+  --awsp-panel-strong: #0b1720;
+  --awsp-card: rgba(15, 23, 30, 0.9);
+  --awsp-lime: #c6ff3d;
+  --awsp-lime-strong: #8fbf2e;
+  --awsp-text: #e2e8f0;
+  --awsp-text-soft: #94a3b8;
+  --awsp-border: rgba(148, 163, 184, 0.2);
+  --awsp-white: #f4f6fa;
+  --awsp-shadow: rgba(3, 7, 18, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(130, 174, 53, 0.15), transparent 25%),
+    linear-gradient(180deg, #07141d 0%, #091b27 100%);
+  color: var(--awsp-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(198, 255, 61, 0.4);
+  color: white;
+}
+
+.awsp-button-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--awsp-lime) 0%, #a9f000 100%);
+  color: #0c1721;
+  padding: 0.875rem 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 18px 35px rgba(166, 243, 72, 0.18);
+}
+
+.awsp-button-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 40px rgba(166, 243, 72, 0.24);
+}
+
+.awsp-button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--awsp-border);
+  border-radius: 9999px;
+  background: rgba(15, 23, 30, 0.55);
+  color: var(--awsp-white);
+  padding: 0.875rem 1.4rem;
+  font-weight: 600;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.awsp-button-secondary:hover {
+  border-color: rgba(166, 243, 72, 0.8);
+  background: rgba(15, 23, 30, 0.8);
+}
+
+.awsp-card {
+  background: rgba(15, 23, 30, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 12px 35px rgba(2, 6, 23, 0.18);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.7rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--awsp-lime);
+}
+
+.section-heading {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.06;
+  letter-spacing: -0.06em;
+  color: #f8fafc;
+}
+
+@media (max-width: 768px) {
+  .awsp-button-primary,
+  .awsp-button-secondary {
+    width: 100%;
+  }
+}
