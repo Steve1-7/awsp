@@ -51,9 +51,9 @@ const processSteps = [
 ];
 
 const projectCards = [
-  { title: "Solar Retrofit for Mixed-Use Facility", category: "Commercial Solar", location: "Johannesburg" },
-  { title: "Residential Hybrid Upgrade", category: "Energy", location: "Pretoria" },
-  { title: "Property Maintenance Response", category: "Maintenance", location: "Sandton" },
+  { title: "Solar Retrofit for Mixed-Use Facility", category: "Commercial Solar", location: "Johannesburg", image: "roof.png", imageAlt: "Solar panels installed across a commercial rooftop." },
+  { title: "Residential Hybrid Upgrade", category: "Energy", location: "Pretoria", image: "high.webp", imageAlt: "Residential hybrid solar energy installation." },
+  { title: "Property Maintenance Response", category: "Maintenance", location: "Sandton", image: "ele.webp", imageAlt: "Electrical repair and maintenance work." },
 ];
 
 const testimonials = [
@@ -63,9 +63,9 @@ const testimonials = [
 ];
 
 const insightCards = [
-  { title: "Solar battery planning for load shedding resilience", category: "Solar" },
-  { title: "Preventative maintenance checklist for home systems", category: "Maintenance" },
-  { title: "How to prepare your property for commercial cleaning", category: "Cleaning" },
+  { title: "Solar battery planning for load shedding resilience", category: "Solar", image: "2.2.jpg", imageAlt: "Solar inverter and battery installation." },
+  { title: "Preventative maintenance checklist for home systems", category: "Maintenance", image: "1.9.jpg", imageAlt: "Solar inverter beside a modular battery bank." },
+  { title: "How to prepare your property for commercial cleaning", category: "Cleaning", image: "after.webp", imageAlt: "Rooftop solar panels after cleaning." },
 ];
 
 const serviceOptions = [
@@ -307,7 +307,9 @@ export default function HomePage() {
         <div className="grid gap-6 md:grid-cols-3">
           {projectCards.map((project) => (
             <article key={project.title} className="awsp-card overflow-hidden p-0">
-              <div className="h-52 bg-[radial-gradient(circle_at_top,_rgba(166,243,72,0.28),_rgba(15,23,30,0.92)_40%,_rgba(9,17,22,1)_100%)]" />
+              <div className="relative h-52 overflow-hidden bg-slate-900">
+                <Image src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              </div>
               <div className="p-5">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-lime-300">{project.category}</p>
                 <h3 className="mt-3 text-xl font-semibold text-white">{project.title}</h3>
@@ -371,7 +373,9 @@ export default function HomePage() {
         <div className="grid gap-6 md:grid-cols-3">
           {insightCards.map((item) => (
             <article key={item.title} className="awsp-card">
-              <div className="h-40 rounded-2xl bg-[radial-gradient(circle_at_top,_rgba(173,227,52,0.22),_rgba(18,26,30,0.9)_50%,_rgba(12,16,20,1)_100%)]" />
+              <div className="relative h-40 overflow-hidden rounded-2xl bg-slate-900">
+                <Image src={`/img/${item.image}`} alt={item.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              </div>
               <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-lime-300">{item.category}</p>
               <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>
             </article>

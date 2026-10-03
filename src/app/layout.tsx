@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ImageProtection } from "@/components/image-protection";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -10,7 +11,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="min-h-full bg-[#07141d] text-slate-100">{children}</body>
+      <body className="min-h-full bg-[#07141d] text-slate-100">
+        <ImageProtection />
+        {children}
+      </body>
     </html>
   );
 }
