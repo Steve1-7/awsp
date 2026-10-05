@@ -83,8 +83,8 @@ const solarBrands = [
 ];
 
 const financeOptions = [
-  { name: "Creative Finance Solutions", image: "4.png" },
-  { name: "Absa", image: "5.png" },
+  { name: "Creative Finance Solutions", image: "5.png" },
+  { name: "Absa", image: "4.png" },
   { name: "Rentquip", image: "3.png" },
 ];
 
