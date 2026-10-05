@@ -68,6 +68,26 @@ const insightCards = [
   { title: "How to prepare your property for commercial cleaning", category: "Cleaning", image: "after.webp", imageAlt: "Rooftop solar panels after cleaning." },
 ];
 
+const solarBrands = [
+  { name: "Deye", image: "deye.jpg" },
+  { name: "Jinko ESS", image: "jinko.png" },
+  { name: "Victron Energy Blue Power", image: "victron.jpeg" },
+  { name: "SEG Energy", image: "seg.png" },
+  { name: "Freedom Won", image: "FREEDOM WON.JPG" },
+  { name: "JA Solar", image: "ja.png" },
+  { name: "Trina Solar", image: "cli.png" },
+  { name: "Canadian Solar", image: "CANADIAN.JPG" },
+  { name: "ATESS", image: "ATESS.JPG" },
+  { name: "SunSynk", image: "sun.png" },
+  { name: "AREP", image: "AREP.JPG" },
+];
+
+const financeOptions = [
+  { name: "Creative Finance Solutions", image: "4.png" },
+  { name: "Absa", image: "5.png" },
+  { name: "Rentquip", image: "3.png" },
+];
+
 const serviceOptions = [
   "Energy",
   "Repair",
@@ -291,6 +311,54 @@ export default function HomePage() {
             </p>
           </div>
           <div className="w-full max-w-xl"><EnergyCalculator /></div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-18 lg:px-10" aria-labelledby="partners-title">
+        <div className="mb-10 max-w-3xl">
+          <p className="eyebrow">Finance &amp; technology</p>
+          <h2 id="partners-title" className="section-heading">Technology brands and finance options.</h2>
+          <p className="mt-4 text-base leading-7 text-slate-300">
+            AWSP is approved for finance by Volta. All finance remains subject to provider terms and eligibility.
+          </p>
+        </div>
+
+        <div className="rounded-[2rem] border border-lime-500/30 bg-lime-300/5 p-6 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-lime-200">Approved finance partner</p>
+          <div className="mt-5 flex max-w-sm items-center gap-5 rounded-2xl border border-slate-700 bg-white p-5">
+            <div className="relative h-16 flex-1">
+              <Image src="/img/valta.png" alt="" fill sizes="(max-width: 640px) 50vw, 240px" className="object-contain" />
+            </div>
+            <span className="text-sm font-semibold text-slate-900">Volta</span>
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <h3 className="text-xl font-semibold text-white">Solar &amp; storage brands</h3>
+          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
+            {solarBrands.map((brand) => (
+              <figure key={brand.name} className="rounded-xl border border-slate-800 bg-white p-3">
+                <div className="relative h-16">
+                  <Image src={`/img/${brand.image}`} alt="" fill sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 16vw" className="object-contain" />
+                </div>
+                <figcaption className="mt-2 text-center text-xs font-medium text-slate-700">{brand.name}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-10">
+          <h3 className="text-xl font-semibold text-white">Other finance options</h3>
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {financeOptions.map((option) => (
+              <figure key={option.name} className="rounded-xl border border-slate-800 bg-white p-4">
+                <div className="relative h-20">
+                  <Image src={`/img/${option.image}`} alt="" fill sizes="(max-width: 640px) 100vw, 33vw" className="object-contain" />
+                </div>
+                <figcaption className="mt-2 text-center text-sm font-medium text-slate-700">{option.name}</figcaption>
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
 
