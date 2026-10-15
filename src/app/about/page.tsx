@@ -2,8 +2,8 @@ import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
 
 const referenceLetters = [
-  { title: "Recommendation Letter — J. Geldenhuys", file: "Letter-of-recommendation-J-Geldenhuys.pdf" },
-  { title: "Reference Letter", file: "REFERENCE-LETTER.pdf" },
+  { title: "Recommendation Letter — Derek Mills, D&A Gearbox Services", file: "Letter-of-recommendation-J-Geldenhuys.pdf" },
+  { title: "Reference Letter — IEP", file: "REFERENCE-LETTER.pdf" },
   { title: "Recommendation Letter — Doron Collen", file: "A-Way-Recommendation-Letter-Doron-Collen.pdf" },
 ];
 
