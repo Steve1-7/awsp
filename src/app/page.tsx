@@ -70,6 +70,7 @@ const insightCards = [
 ];
 
 const solarBrands = [
+  { name: "Volta", image: "valta.png" },
   { name: "Deye", image: "deye.jpg" },
   { name: "Jinko ESS", image: "jinko.png" },
   { name: "Victron Energy Blue Power", image: "victron.jpeg" },
@@ -108,6 +109,7 @@ const serviceDetailMap: Record<(typeof serviceOptions)[number], string[]> = {
 export default function HomePage() {
   const [selectedService, setSelectedService] = useState<(typeof serviceOptions)[number]>("Energy");
   const [selectedDetail, setSelectedDetail] = useState<string>(serviceDetailMap.Energy[0]);
+  const [isBrandSliderPaused, setIsBrandSliderPaused] = useState(false);
 
   const handleServiceSelect = (service: (typeof serviceOptions)[number]) => {
     setSelectedService(service);
@@ -332,16 +334,36 @@ export default function HomePage() {
         </div>
 
         <div className="mt-10">
-          <h3 className="text-xl font-semibold text-white">Solar &amp; storage brands</h3>
-          <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-6">
-            {solarBrands.map((brand) => (
-              <figure key={brand.name} className="rounded-xl border border-slate-800 bg-white p-3">
-                <div className="relative h-16">
-                  <Image src={`/img/${brand.image}`} alt="" fill sizes="(max-width: 640px) 50vw, (max-width: 1280px) 25vw, 16vw" className="object-contain" />
+          <div className="flex items-center justify-between gap-4">
+            <h3 className="text-xl font-semibold text-white">Solar &amp; storage brands</h3>
+            <button
+              type="button"
+              aria-pressed={isBrandSliderPaused}
+              onClick={() => setIsBrandSliderPaused((paused) => !paused)}
+              className="shrink-0 rounded-full border border-slate-700 px-3 py-2 text-xs font-medium text-slate-300 transition hover:border-lime-300/60 hover:text-white"
+            >
+              {isBrandSliderPaused ? "Play logos" : "Pause logos"}
+            </button>
+          </div>
+          <div
+            className={`awsp-brand-marquee mt-5${isBrandSliderPaused ? " is-paused" : ""}`}
+            role="region"
+            aria-label="Solar and storage brands"
+          >
+            <div className="awsp-brand-marquee-track">
+              {[false, true].map((isDuplicate) => (
+                <div key={String(isDuplicate)} className="awsp-brand-marquee-group" aria-hidden={isDuplicate}>
+                  {solarBrands.map((brand) => (
+                    <figure key={`${String(isDuplicate)}-${brand.name}`} className="w-36 shrink-0 rounded-xl border border-slate-800 bg-white p-3 sm:w-44">
+                      <div className="relative h-16">
+                        <Image src={`/img/${brand.image}`} alt="" fill sizes="176px" className="object-contain" />
+                      </div>
+                      <figcaption className="mt-2 text-center text-xs font-medium text-slate-700">{brand.name}</figcaption>
+                    </figure>
+                  ))}
                 </div>
-                <figcaption className="mt-2 text-center text-xs font-medium text-slate-700">{brand.name}</figcaption>
-              </figure>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 

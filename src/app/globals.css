@@ -142,6 +142,45 @@ textarea {
   pointer-events: none;
 }
 
+.awsp-brand-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.awsp-brand-marquee-track,
+.awsp-brand-marquee-group {
+  display: flex;
+  width: max-content;
+}
+
+.awsp-brand-marquee-track {
+  animation: awsp-brand-marquee 42s linear infinite;
+}
+
+.awsp-brand-marquee-group {
+  flex-shrink: 0;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.awsp-brand-marquee:hover .awsp-brand-marquee-track,
+.awsp-brand-marquee:focus-within .awsp-brand-marquee-track,
+.awsp-brand-marquee.is-paused .awsp-brand-marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes awsp-brand-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .awsp-brand-marquee-track {
+    animation: none;
+  }
+}
+
 @media (max-width: 768px) {
   .awsp-button-primary,
   .awsp-button-secondary {
