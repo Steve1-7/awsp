@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, type FormEvent } from "react";
 import { SiteShell } from "@/components/site-shell";
-import { AWSP_CONTACT_EMAIL, AWSP_WHATSAPP_URL, createRequestLinks } from "@/components/request-links";
+import { AWSP_CONTACT_EMAILS, AWSP_WHATSAPP_URL, createRequestLinks } from "@/components/request-links";
 
 export default function ContactPage() {
   const [requestLinks, setRequestLinks] = useState<ReturnType<typeof createRequestLinks> | null>(null);
@@ -32,7 +32,9 @@ export default function ContactPage() {
             <h1 className="section-heading">Let’s talk about your property, project or service need.</h1>
             <div className="mt-8 space-y-4 text-sm text-slate-300">
               <a href={AWSP_WHATSAPP_URL} target="_blank" rel="noreferrer" className="block transition hover:text-lime-300">WhatsApp: 083 253 9773</a>
-              <a href={`mailto:${AWSP_CONTACT_EMAIL}`} className="block transition hover:text-lime-300">Email: {AWSP_CONTACT_EMAIL}</a>
+              {AWSP_CONTACT_EMAILS.map(({ label, email }) => (
+                <a key={email} href={`mailto:${email}`} className="block transition hover:text-lime-300">{label}: {email}</a>
+              ))}
               <p>Alberton / Gauteng</p>
             </div>
           </div>

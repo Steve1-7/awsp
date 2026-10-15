@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SiteShell } from "@/components/site-shell";
+import { ProtectedImage } from "@/components/protected-image";
 
 const solarOptions = [
   { title: "Residential solar", image: "1.0.jpg", alt: "Solar panels installed across a rooftop." },
@@ -28,7 +28,7 @@ export default function SolarPage() {
           {solarOptions.map((option, index) => (
             <article key={option.title} className="awsp-card overflow-hidden p-0">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image src={`/img/${option.image}`} alt={option.alt} fill loading={index < 4 ? "eager" : "lazy"} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-500 hover:scale-105" />
+                <ProtectedImage src={`/img/${option.image}`} alt={option.alt} fill loading={index < 4 ? "eager" : "lazy"} sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition duration-500 hover:scale-105" />
               </div>
               <div className="p-5">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-lime-300">Solution</p>

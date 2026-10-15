@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { SiteShell } from "@/components/site-shell";
+import { ProtectedImage } from "@/components/protected-image";
 
 const articles = [
   { title: "Solar battery planning for load shedding resilience", category: "Solar", image: "1.6.jpg", imageAlt: "Modular battery storage connected to a solar energy system." },
@@ -14,7 +14,7 @@ const articles = [
 export default function InsightsPage() {
   return (
     <SiteShell>
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <section className="awsp-featured-page mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="max-w-3xl">
           <p className="eyebrow">Insights</p>
           <h1 className="section-heading">Useful guidance for energy, service and property care decisions.</h1>
@@ -24,7 +24,7 @@ export default function InsightsPage() {
           {articles.map((article) => (
             <article key={article.title} className="awsp-card">
               <div className="relative h-40 overflow-hidden rounded-2xl bg-slate-900">
-                <Image src={`/img/${article.image}`} alt={article.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover" />
+                <ProtectedImage src={`/img/${article.image}`} alt={article.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover" />
               </div>
               <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-lime-300">{article.category}</p>
               <h2 className="mt-3 text-2xl font-semibold text-white">{article.title}</h2>

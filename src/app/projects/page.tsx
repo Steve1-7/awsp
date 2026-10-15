@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { SiteShell } from "@/components/site-shell";
+import { ProtectedImage } from "@/components/protected-image";
 
 const projectCategories = [
   "All",
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
           {filteredProjects.map((project) => (
             <article key={project.title} className="awsp-card group overflow-hidden p-0 transition-[transform,border-color,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:border-lime-300/40 hover:shadow-xl motion-reduce:transition-none">
               <div className="relative h-52 overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(166,243,72,0.2),_rgba(15,23,30,0.85)_40%,_rgba(9,17,22,1)_100%)]">
-                {project.image && <Image src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" />}
+                {project.image && <ProtectedImage src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" />}
               </div>
               <div className="p-5">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-lime-300">{project.categories.join(" · ")}</p>
@@ -98,7 +98,7 @@ export default function ProjectsPage() {
             {projectGallery.map((item) => (
               <figure key={item.image}>
                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-900">
-                  <Image src={`/img/${item.image}`} alt={item.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition duration-500 hover:scale-105" />
+                  <ProtectedImage src={`/img/${item.image}`} alt={item.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition duration-500 hover:scale-105" />
                 </div>
                 <figcaption className="mt-3 text-sm text-slate-200">{item.caption}</figcaption>
               </figure>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { SiteShell } from "@/components/site-shell";
 import { EnergyCalculator } from "@/components/energy-calculator";
+import { ProtectedImage } from "@/components/protected-image";
 
 const trustItems = [
   "ENERGY SOLUTIONS",
@@ -119,7 +120,7 @@ export default function HomePage() {
     <SiteShell>
       <section className="mx-auto max-w-7xl px-6 pb-12 pt-6 lg:px-10">
         <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-[#0c1923] shadow-[0_30px_90px_rgba(0,0,0,0.35)]">
-          <Image src="/img/logo1.webp" alt="" fill priority sizes="(max-width: 1280px) 100vw, 1280px" className="object-cover object-center" />
+          <ProtectedImage src="/img/logo1.webp" alt="" fill priority sizes="(max-width: 1280px) 100vw, 1280px" className="object-cover object-center" />
           <div className="absolute inset-0 bg-slate-950/60" />
           <div className="relative z-10 grid gap-8 px-6 py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:py-14">
             <div className="flex flex-col justify-center">
@@ -376,7 +377,7 @@ export default function HomePage() {
           {projectCards.map((project) => (
             <article key={project.title} className="awsp-card overflow-hidden p-0">
               <div className="relative h-52 overflow-hidden bg-slate-900">
-                <Image src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <ProtectedImage src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
               <div className="p-5">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-lime-300">{project.category}</p>
@@ -397,11 +398,11 @@ export default function HomePage() {
           <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="grid h-72 grid-cols-2 overflow-hidden rounded-2xl border border-slate-700">
               <figure className="relative">
-                <Image src="/img/before.webp" alt="Before: rooftop solar panels before the improvement." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
+                <ProtectedImage src="/img/before.webp" alt="Before: rooftop solar panels before the improvement." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-3 py-2 text-center text-xs font-semibold uppercase text-white">Before</figcaption>
               </figure>
               <figure className="relative">
-                <Image src="/img/after.webp" alt="After: rooftop solar panels after the improvement." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
+                <ProtectedImage src="/img/after.webp" alt="After: rooftop solar panels after the improvement." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
                 <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-3 py-2 text-center text-xs font-semibold uppercase text-white">After</figcaption>
               </figure>
             </div>
@@ -442,7 +443,7 @@ export default function HomePage() {
           {insightCards.map((item) => (
             <article key={item.title} className="awsp-card">
               <div className="relative h-40 overflow-hidden rounded-2xl bg-slate-900">
-                <Image src={`/img/${item.image}`} alt={item.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <ProtectedImage src={`/img/${item.image}`} alt={item.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
               <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-lime-300">{item.category}</p>
               <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>

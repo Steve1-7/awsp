@@ -10,7 +10,7 @@ const referenceLetters = [
 export default function AboutPage() {
   return (
     <SiteShell>
-      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+      <section className="awsp-featured-page mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="max-w-3xl">
           <p className="eyebrow">About AWSP</p>
           <h1 className="section-heading">About us.</h1>

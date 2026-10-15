@@ -111,6 +111,37 @@ textarea {
   color: #f8fafc;
 }
 
+.awsp-featured-page {
+  background-image:
+    linear-gradient(rgba(7, 20, 29, 0.88), rgba(7, 20, 29, 0.92)),
+    url("/img/AWAY.webp");
+  background-position: center, center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.awsp-protected-image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.awsp-protected-image-fill {
+  position: absolute;
+  inset: 0;
+}
+
+.awsp-image-watermark {
+  position: absolute;
+  z-index: 1;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: clamp(4rem, 18%, 9rem);
+  aspect-ratio: 432 / 126;
+  opacity: 0.62;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .awsp-button-primary,
   .awsp-button-secondary {

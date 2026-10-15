@@ -69,6 +69,7 @@ const serviceGroups = [
 export default function ServicesPage() {
   return (
     <SiteShell>
+      <div className="awsp-featured-page">
       <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="max-w-3xl">
           <p className="eyebrow">Solutions</p>
@@ -161,6 +162,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+      </div>
     </SiteShell>
   );
 }

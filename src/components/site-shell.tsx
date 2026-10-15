@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { AWSP_CONTACT_EMAIL, AWSP_WHATSAPP_URL } from "@/components/request-links";
+import { AWSP_CONTACT_EMAILS, AWSP_WHATSAPP_URL } from "@/components/request-links";
 
 const navItems = [
   { label: "Solutions", href: "/services" },
@@ -77,6 +77,8 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </p>
             <ul className="mt-5 space-y-2 text-xs leading-5 text-slate-400">
               <li>Level 2 Qualified Installers · P4 Certified</li>
+              <li>Approved by Battery Make</li>
+              <li>Approved and qualified by Arab</li>
               <li>Company Reg No. 2021/872672/07</li>
               <li>Local expertise in Alberton / Gauteng</li>
             </ul>
@@ -105,7 +107,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-300">Contact</p>
             <ul className="mt-4 space-y-2 text-sm text-slate-400">
               <li><a href={AWSP_WHATSAPP_URL} target="_blank" rel="noreferrer" className="transition hover:text-white">WhatsApp: 083 253 9773</a></li>
-              <li><a href={`mailto:${AWSP_CONTACT_EMAIL}`} className="transition hover:text-white">{AWSP_CONTACT_EMAIL}</a></li>
+              {AWSP_CONTACT_EMAILS.map(({ label, email }) => (
+                <li key={email}><a href={`mailto:${email}`} className="transition hover:text-white">{label}: {email}</a></li>
+              ))}
               <li>Alberton / Gauteng</li>
             </ul>
           </div>
