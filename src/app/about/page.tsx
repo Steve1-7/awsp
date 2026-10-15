@@ -37,6 +37,17 @@ export default function AboutPage() {
           ))}
         </div>
 
+        <section className="mt-12 grid gap-5 sm:grid-cols-2" aria-label="AWSP credentials">
+          <article className="rounded-2xl border border-lime-400/30 bg-slate-950/45 p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Finance partner</p>
+            <h2 className="mt-3 text-2xl font-semibold text-white">Approved by Battery Make</h2>
+          </article>
+          <article className="rounded-2xl border border-lime-400/30 bg-slate-950/45 p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Company credentials</p>
+            <h2 className="mt-3 text-2xl font-semibold text-white">Approved, qualified and certified by Arab</h2>
+          </article>
+        </section>
+
         <section className="mt-16 border-y border-slate-700 py-10" aria-labelledby="references-title">
           <div className="max-w-3xl">
             <p className="eyebrow">Client feedback</p>

@@ -320,17 +320,14 @@ export default function HomePage() {
           <p className="eyebrow">Finance &amp; technology</p>
           <h2 id="partners-title" className="section-heading">Technology brands and finance options.</h2>
           <p className="mt-4 text-base leading-7 text-slate-300">
-            AWSP is approved for finance by Volta. All finance remains subject to provider terms and eligibility.
+            AWSP is an approved finance partner of Battery Make. All finance remains subject to provider terms and eligibility.
           </p>
         </div>
 
         <div className="rounded-[2rem] border border-lime-500/30 bg-lime-300/5 p-6 md:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-lime-200">Approved finance partner</p>
-          <div className="mt-5 flex max-w-sm items-center gap-5 rounded-2xl border border-slate-700 bg-white p-5">
-            <div className="relative h-16 flex-1">
-              <Image src="/img/valta.png" alt="" fill sizes="(max-width: 640px) 50vw, 240px" className="object-contain" />
-            </div>
-            <span className="text-sm font-semibold text-slate-900">Volta</span>
+          <div className="mt-5 flex min-h-24 max-w-sm items-center rounded-2xl border border-lime-300/30 bg-slate-950/50 px-6 py-5">
+            <span className="text-2xl font-semibold tracking-tight text-white">Battery Make</span>
           </div>
         </div>
 

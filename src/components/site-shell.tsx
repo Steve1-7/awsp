@@ -78,7 +78,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <ul className="mt-5 space-y-2 text-xs leading-5 text-slate-400">
               <li>Level 2 Qualified Installers · P4 Certified</li>
               <li>Approved by Battery Make</li>
-              <li>Approved and qualified by Arab</li>
+              <li>Approved, qualified and certified by Arab</li>
               <li>Company Reg No. 2021/872672/07</li>
               <li>Local expertise in Alberton / Gauteng</li>
             </ul>
