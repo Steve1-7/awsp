@@ -150,7 +150,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative min-h-[420px] overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-950/15 p-5">
+            <div className="relative hidden min-h-[420px] overflow-hidden rounded-[1.75rem] border border-slate-700 bg-slate-950/15 p-5 md:block">
               <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:36px_36px]" />
               <div className="relative flex h-full flex-col justify-between">
                 <div className="flex items-center justify-between rounded-2xl border border-slate-700 bg-slate-950/60 px-4 py-3 backdrop-blur-sm">
