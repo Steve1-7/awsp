@@ -17,26 +17,26 @@ const projectCategories = [
 ];
 
 const projects = [
-  { title: "Commercial Solar Retrofit", categories: ["Solar", "Commercial"], location: "Johannesburg", scope: "Energy improvement", image: "roof.png", imageAlt: "Solar panels installed across a commercial rooftop." },
-  { title: "Residential Hybrid Upgrade", categories: ["Solar", "Residential"], location: "Pretoria", scope: "Energy resilience", image: "high.webp", imageAlt: "Residential hybrid solar energy installation." },
-  { title: "Property Maintenance Response", categories: ["Maintenance"], location: "Sandton", scope: "Preventative support", image: "before.webp", imageAlt: "Solar panels installed across a residential rooftop." },
-  { title: "Electrical Repair Intervention", categories: ["Repairs"], location: "Centurion", scope: "Fault diagnosis", image: "ele.webp", imageAlt: "Electrical repair and maintenance work." },
-  { title: "Office Deep Cleaning Programme", categories: ["Cleaning", "Commercial"], location: "Midrand", scope: "Commercial cleaning", image: "after.webp", imageAlt: "Clean solar panels installed across a rooftop." },
-  { title: "Industrial Energy Review", categories: ["Solar", "Industrial"], location: "Germiston", scope: "Energy assessment", image: "1.2.jpg", imageAlt: "Hybrid solar inverter and electrical protection equipment." },
-  { title: "Rooftop Solar Installation & Panel Cleaning", categories: ["Solar", "Residential", "Cleaning"], location: "Alberton / Gauteng", scope: "Roof-mounted PV array and panel care", image: "1.0.jpg", imageAlt: "Solar panels installed across a rooftop." },
+  { title: "Commercial Solar Retrofit", categories: ["Solar", "Commercial"], location: "Johannesburg", scope: "Energy improvement", image: "batch_batch_1.5.webp", imageAlt: "Solar inverter and electrical equipment installed on a wall." },
+  { title: "Residential Hybrid Upgrade", categories: ["Solar", "Residential"], location: "Pretoria", scope: "Energy resilience", image: "batch_batch_1.9.webp", imageAlt: "Deye solar inverter and electrical equipment installation." },
+  { title: "Property Maintenance Response", categories: ["Maintenance"], location: "Sandton", scope: "Preventative support", image: "batch_batch_1.3.webp", imageAlt: "Solar PV combiner and inverter equipment installation." },
+  { title: "Electrical Repair Intervention", categories: ["Repairs"], location: "Centurion", scope: "Fault diagnosis", image: "batch_batch_2.2.webp", imageAlt: "Multiple Deye solar inverters installed together." },
+  { title: "Office Deep Cleaning Programme", categories: ["Cleaning", "Commercial"], location: "Midrand", scope: "Commercial cleaning", image: "batch_batch_1.6.webp", imageAlt: "Wall-mounted solar inverter and electrical protection equipment." },
+  { title: "Industrial Energy Review", categories: ["Solar", "Industrial"], location: "Germiston", scope: "Energy assessment", image: "batch_batch_1.0.webp", imageAlt: "Solar panels covering a rooftop." },
+  { title: "Rooftop Solar Installation & Panel Cleaning", categories: ["Solar", "Residential", "Cleaning"], location: "Alberton / Gauteng", scope: "Roof-mounted PV array and panel care", image: "batch_batch_1.7.webp", imageAlt: "Sunsynk solar inverter installed as part of a home energy system." },
 ];
 
 const projectGallery = [
-  { image: "1.0.jpg", caption: "Rooftop solar panel array", alt: "Solar panels installed across a rooftop." },
-  { image: "1.1.jpeg", caption: "Dual inverter and battery installation", alt: "Two solar inverters and battery units installed indoors." },
-  { image: "1.2.jpg", caption: "Hybrid inverter and electrical protection", alt: "Wall-mounted hybrid inverter with electrical protection equipment." },
-  { image: "1.3.jpg", caption: "Deye inverter and battery installation", alt: "Deye solar inverter and battery system." },
-  { image: "1.4.jpg", caption: "Inverter and home storage system", alt: "Wall-mounted solar inverter with battery storage." },
-  { image: "1.5.jpg", caption: "Inverter with EEnovance battery", alt: "Solar inverter and EEnovance battery installation." },
-  { image: "1.6.jpg", caption: "Modular battery storage", alt: "Stacked battery modules connected to an inverter." },
-  { image: "1.7.jpg", caption: "Inverter and battery system", alt: "Installed solar inverter and battery equipment." },
-  { image: "1.9.jpg", caption: "Large-format battery installation", alt: "Solar inverter beside a modular battery bank." },
-  { image: "2.2.jpg", caption: "Hybrid solar equipment", alt: "Solar inverter and battery installation." },
+  { image: "batch_batch_2.2.webp", caption: "Deye inverter installation", alt: "Multiple Deye solar inverters installed together." },
+  { image: "batch_batch_1.4.webp", caption: "Solar inverter and electrical protection", alt: "Solar inverter and electrical equipment with warning labels." },
+  { image: "batch_batch_1.0.webp", caption: "Rooftop solar panel array", alt: "Solar panels covering a rooftop." },
+  { image: "batch_batch_1.6.webp", caption: "Wall-mounted solar energy equipment", alt: "Wall-mounted solar inverter and electrical protection equipment." },
+  { image: "batch_batch_1.3.webp", caption: "PV combiner and inverter equipment", alt: "Solar PV combiner and inverter equipment installation." },
+  { image: "batch_batch_1.7.webp", caption: "Sunsynk inverter installation", alt: "Sunsynk solar inverter installed as part of a home energy system." },
+  { image: "batch_batch_1.9.webp", caption: "Deye solar inverter system", alt: "Deye solar inverter and electrical equipment installation." },
+  { image: "batch_batch_1.5.webp", caption: "Solar inverter and electrical equipment", alt: "Solar inverter and electrical equipment installed on a wall." },
+  { image: "batch_batch_1.4.webp", caption: "Electrical safety and inverter equipment", alt: "Solar inverter and electrical equipment with warning labels." },
+  { image: "batch_batch_1.0.webp", caption: "Solar panels on a commercial roof", alt: "Solar panels covering a rooftop." },
 ];
 
 export default function ProjectsPage() {
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
           {filteredProjects.map((project) => (
             <article key={project.title} className="awsp-card group overflow-hidden p-0 transition-[transform,border-color,box-shadow] duration-300 ease-out hover:-translate-y-1 hover:border-lime-300/40 hover:shadow-xl motion-reduce:transition-none">
               <div className="relative h-52 overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(166,243,72,0.2),_rgba(15,23,30,0.85)_40%,_rgba(9,17,22,1)_100%)]">
-                {project.image && <ProtectedImage src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" />}
+                {project.image && <ProtectedImage src={`/img/output/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none" />}
               </div>
               <div className="p-5">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-lime-300">{project.categories.join(" · ")}</p>
@@ -96,9 +96,9 @@ export default function ProjectsPage() {
           </div>
           <div className="grid gap-x-5 gap-y-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {projectGallery.map((item) => (
-              <figure key={item.image}>
+              <figure key={item.caption}>
                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-900">
-                  <ProtectedImage src={`/img/${item.image}`} alt={item.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition duration-500 hover:scale-105" />
+                  <ProtectedImage src={`/img/output/${item.image}`} alt={item.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover transition duration-500 hover:scale-105" />
                 </div>
                 <figcaption className="mt-3 text-sm text-slate-200">{item.caption}</figcaption>
               </figure>

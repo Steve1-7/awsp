@@ -113,7 +113,7 @@ textarea {
 
 .awsp-featured-page {
   background-image:
-    linear-gradient(rgba(7, 20, 29, 0.88), rgba(7, 20, 29, 0.92)),
+    linear-gradient(rgba(7, 20, 29, 0.48), rgba(7, 20, 29, 0.62)),
     url("/img/AWAY.webp");
   background-position: center, center top;
   background-repeat: no-repeat;
