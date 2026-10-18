@@ -16,7 +16,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-[#07141d]/80 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-10">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/img/logo.webp" alt="A-Way Solutions & Projects" width={432} height={126} priority className="h-[55.2px] w-[181.7px] object-contain sm:w-[207px]" />
+            <Image src="/img/logo.webp" alt="A-Way Solutions & Projects" width={432} height={126} priority className="h-[66.24px] w-[218.04px] object-contain sm:w-[248.4px]" />
           </Link>
 
           <div className="hidden items-center gap-7 text-sm text-slate-300 lg:flex">
@@ -70,7 +70,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-12 md:grid-cols-2 lg:grid-cols-5 lg:px-10">
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3">
-              <Image src="/img/logo.webp" alt="A-Way Solutions & Projects" width={432} height={126} className="h-[55.2px] w-[207px] object-contain" />
+              <Image src="/img/logo.webp" alt="A-Way Solutions & Projects" width={432} height={126} className="h-[66.24px] w-[248.4px] object-contain" />
             </div>
             <p className="mt-4 max-w-md text-sm leading-7 text-slate-400">
               Practical solutions for energy, property support, repairs and cleaning — delivered with technical clarity and responsive service.
