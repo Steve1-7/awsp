@@ -52,9 +52,9 @@ const processSteps = [
 ];
 
 const projectCards = [
-  { title: "Solar Retrofit for Mixed-Use Facility", category: "Commercial Solar", location: "Johannesburg", image: "roof.png", imageAlt: "Solar panels installed across a commercial rooftop." },
-  { title: "Residential Hybrid Upgrade", category: "Energy", location: "Pretoria", image: "high.webp", imageAlt: "Residential hybrid solar energy installation." },
-  { title: "Property Maintenance Response", category: "Maintenance", location: "Sandton", image: "ele.webp", imageAlt: "Electrical repair and maintenance work." },
+  { title: "Solar Retrofit for Mixed-Use Facility", category: "Commercial Solar", location: "Johannesburg", image: "batch_batch_2.2.webp", imageAlt: "Multiple Deye solar inverters installed together." },
+  { title: "Residential Hybrid Upgrade", category: "Energy", location: "Pretoria", image: "batch_batch_1.5.webp", imageAlt: "Solar inverter and electrical equipment installed on a wall." },
+  { title: "Property Maintenance Response", category: "Maintenance", location: "Sandton", image: "batch_batch_1.3.webp", imageAlt: "Solar PV combiner and inverter equipment installation." },
 ];
 
 const testimonials = [
@@ -64,9 +64,9 @@ const testimonials = [
 ];
 
 const insightCards = [
-  { title: "Solar battery planning for load shedding resilience", category: "Solar", image: "2.2.jpg", imageAlt: "Solar inverter and battery installation." },
-  { title: "Preventative maintenance checklist for home systems", category: "Maintenance", image: "1.9.jpg", imageAlt: "Solar inverter beside a modular battery bank." },
-  { title: "How to prepare your property for commercial cleaning", category: "Cleaning", image: "after.webp", imageAlt: "Rooftop solar panels after cleaning." },
+  { title: "Solar battery planning for load shedding resilience", category: "Solar", image: "batch_batch_1.9.webp", imageAlt: "Deye solar inverter and electrical equipment installation." },
+  { title: "Preventative maintenance checklist for home systems", category: "Maintenance", image: "batch_batch_1.4.webp", imageAlt: "Solar inverter and electrical equipment with warning labels." },
+  { title: "How to prepare your property for commercial cleaning", category: "Cleaning", image: "batch_batch_1.7.webp", imageAlt: "Sunsynk solar inverter installed as part of a home energy system." },
 ];
 
 const solarBrands = [
@@ -122,7 +122,7 @@ export default function HomePage() {
     <SiteShell>
       <section className="mx-auto max-w-7xl px-6 pb-12 pt-6 lg:px-10">
         <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-[#0c1923] shadow-[0_30px_90px_rgba(0,0,0,0.35)]">
-          <ProtectedImage src="/img/logo1.webp" alt="" fill priority sizes="(max-width: 1280px) 100vw, 1280px" className="object-cover object-center" />
+          <ProtectedImage src="/img/output/batch_batch_1.0.webp" alt="" fill priority sizes="(max-width: 1280px) 100vw, 1280px" className="object-cover object-center" />
           <div className="absolute inset-0 bg-slate-950/60" />
           <div className="relative z-10 grid gap-8 px-6 py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:py-14">
             <div className="flex flex-col justify-center">
@@ -396,7 +396,7 @@ export default function HomePage() {
           {projectCards.map((project) => (
             <article key={project.title} className="awsp-card overflow-hidden p-0">
               <div className="relative h-52 overflow-hidden bg-slate-900">
-                <ProtectedImage src={`/img/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <ProtectedImage src={`/img/output/${project.image}`} alt={project.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
               <div className="p-5">
                 <p className="text-[10px] uppercase tracking-[0.2em] text-lime-300">{project.category}</p>
@@ -410,26 +410,26 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-6 py-18 lg:px-10">
         <div className="mb-10">
-          <p className="eyebrow">Before & after</p>
-          <h2 className="section-heading">Proof that quality workmanship changes outcomes.</h2>
+          <p className="eyebrow">Installation gallery</p>
+          <h2 className="section-heading">Solar and energy installations completed on site.</h2>
         </div>
         <div className="rounded-[2rem] border border-slate-800 bg-[#0d1820] p-6 md:p-8">
           <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="grid h-72 grid-cols-2 overflow-hidden rounded-2xl border border-slate-700">
               <figure className="relative">
-                <ProtectedImage src="/img/before.webp" alt="Before: rooftop solar panels before the improvement." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-3 py-2 text-center text-xs font-semibold uppercase text-white">Before</figcaption>
+                <ProtectedImage src="/img/output/batch_batch_1.0.webp" alt="Solar panels covering a rooftop." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-3 py-2 text-center text-xs font-semibold uppercase text-white">Rooftop solar</figcaption>
               </figure>
               <figure className="relative">
-                <ProtectedImage src="/img/after.webp" alt="After: rooftop solar panels after the improvement." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
-                <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-3 py-2 text-center text-xs font-semibold uppercase text-white">After</figcaption>
+                <ProtectedImage src="/img/output/batch_batch_1.6.webp" alt="Wall-mounted solar inverter and electrical protection equipment." fill sizes="(max-width: 1024px) 50vw, 30vw" className="object-cover" />
+                <figcaption className="absolute inset-x-0 bottom-0 bg-slate-950/70 px-3 py-2 text-center text-xs font-semibold uppercase text-white">Inverter system</figcaption>
               </figure>
             </div>
             <div className="flex flex-col justify-center rounded-2xl border border-slate-700 bg-slate-950/70 p-6">
-              <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Case study</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Installation</p>
               <h3 className="mt-3 text-2xl font-semibold text-white">Property refresh and service uplift</h3>
               <p className="mt-4 text-sm leading-7 text-slate-300">A practical, layered intervention improved reliability, presentation and day-to-day usability for the client’s property.</p>
-              <div className="mt-6 flex items-center gap-3 text-sm text-lime-200"><span className="h-2.5 w-2.5 rounded-full bg-lime-400" /> Before / After comparison</div>
+              <div className="mt-6 flex items-center gap-3 text-sm text-lime-200"><span className="h-2.5 w-2.5 rounded-full bg-lime-400" /> Project installation photos</div>
             </div>
           </div>
         </div>
@@ -462,7 +462,7 @@ export default function HomePage() {
           {insightCards.map((item) => (
             <article key={item.title} className="awsp-card">
               <div className="relative h-40 overflow-hidden rounded-2xl bg-slate-900">
-                <ProtectedImage src={`/img/${item.image}`} alt={item.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <ProtectedImage src={`/img/output/${item.image}`} alt={item.imageAlt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </div>
               <p className="mt-5 text-[10px] uppercase tracking-[0.2em] text-lime-300">{item.category}</p>
               <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>
