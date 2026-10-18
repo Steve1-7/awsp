@@ -131,6 +131,11 @@ textarea {
   inset: 0;
 }
 
+.awsp-protected-image-picture-fill {
+  position: absolute;
+  inset: 0;
+}
+
 .awsp-image-watermark {
   position: absolute;
   z-index: 1;
