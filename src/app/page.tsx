@@ -122,7 +122,7 @@ export default function HomePage() {
     <SiteShell>
       <section className="mx-auto max-w-7xl px-6 pb-12 pt-6 lg:px-10">
         <div className="relative overflow-hidden rounded-[2rem] border border-slate-800 bg-[#0c1923] shadow-[0_30px_90px_rgba(0,0,0,0.35)]">
-          <ProtectedImage src="/img/AWAY.webp" alt="" fill priority sizes="(max-width: 1280px) 100vw, 1280px" className="object-cover object-center" />
+          <ProtectedImage src="/img/AWAY-8k.webp" alt="" fill priority sizes="(max-width: 1280px) 100vw, 1280px" className="object-cover object-center" />
           <div className="absolute inset-0 bg-slate-950/60" />
           <div className="relative z-10 grid gap-8 px-6 py-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-10 lg:py-14">
             <div className="flex flex-col justify-center">
