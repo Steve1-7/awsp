@@ -44,7 +44,7 @@ export default function AboutPage() {
           </article>
           <article className="rounded-2xl border border-lime-400/30 bg-slate-950/45 p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-lime-300">Company credentials</p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">Approved, qualified and certified by Arab</h2>
+            <h2 className="mt-3 text-2xl font-semibold text-white">Approved, qualified and certified by AREP</h2>
           </article>
         </section>
 
